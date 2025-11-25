@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthAI - Smart Health Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                    </path>
+                </svg>
+                <span class="brand-text">HealthAI</span>
+            </div>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                <li><a href="#analytics" class="nav-link">Analytics</a></li>
+                <li><a href="#recommendations" class="nav-link">Recommendations</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="section active">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">AI-Powered</span><br>
+                    Health Monitoring
+                </h1>
+                <p class="hero-description">
+                    Monitor your vitals in real-time. Get intelligent insights.
+                    Take control of your health journey with cutting-edge AI technology.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showSection('dashboard')">
+                        Start Monitoring
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-secondary" onclick="showSection('about')">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="pulse-animation">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-center">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="container">
+            <div class="features-section">
+                <h2 class="section-title">Why Choose HealthAI?</h2>
+                <div class="features-grid">
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper blue">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Real-Time Tracking</h3>
+                        <p class="feature-text">Monitor heart rate, oxygen levels, and activity 24/7 with live updates
+                            every 5 seconds.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper purple">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <circle cx="12" cy="12" r="10" />
+                                <path d="M12 16v-4M12 8h.01" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Smart Anomaly Detection</h3>
+                        <p class="feature-text">AI algorithms detect irregular patterns and alert you before issues
+                            escalate.</p>
+                    </div>
+
+                    <div class="feature-box">
+                        <div class="feature-icon-wrapper pink">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Personalized Insights</h3>
+                        <p class="feature-text">Get customized health recommendations based on your unique data
+                            patterns.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARD PAGE -->
+    <section id="dashboard" class="section">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Health Dashboard</h1>
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    <span>Live Monitoring</span>
+                </div>
+            </div>
+
+            <!-- Vital Signs Grid -->
+            <div class="vitals-grid">
+                <div class="vital-card vital-heart">
+                    <div class="vital-header">
+                        <div class="vital-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="vital-badge badge-normal" id="heartBadge">Normal</span>
+                    </div>
+                    <h3 class="vital-label">Heart Rate</h3>
+                    <div class="vital-value">
+                        <span class="value-number" id="heartRate">72</span>
+                        <span class="value-unit">bpm</span>
+                    </div>
+                    <div class="vital-trend">
+                        <span class="trend-text">Resting rate</span>
+                    </div>
+                </div>
+
+                <div class="vital-card vital-oxygen">
+                    <div class="vital-header">
+                        <div class="vital-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                            </svg>
+                        </div>
+                        <span class="vital-badge badge-normal" id="oxygenBadge">Normal</span>
+                    </div>
+                    <h3 class="vital-label">Blood Oxygen</h3>
+                    <div class="vital-value">
+                        <span class="value-number" id="bloodOxygen">98</span>
+                        <span class="value-unit">%</span>
+                    </div>
+                    <div class="vital-trend">
+                        <span class="trend-text">Optimal level</span>
+                    </div>
+                </div>
+
+                <div class="vital-card vital-sleep">
+                    <div class="vital-header">
+                        <div class="vital-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                            </svg>
+                        </div>
+                        <span class="vital-badge badge-normal">Normal</span>
+                    </div>
+                    <h3 class="vital-label">Sleep Duration</h3>
+                    <div class="vital-value">
+                        <span class="value-number" id="sleepHours">7.5</span>
+                        <span class="value-unit">hrs</span>
+                    </div>
+                    <div class="vital-trend">
+                        <span class="trend-text">Last night</span>
+                    </div>
+                </div>
+
+                <div class="vital-card vital-activity">
+                    <div class="vital-header">
+                        <div class="vital-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg>
+                        </div>
+                        <span class="vital-badge badge-normal">Active</span>
+                    </div>
+                    <h3 class="vital-label">Activity Level</h3>
+                    <div class="vital-value">
+                        <span class="value-text" id="activityLevel">Moderate</span>
+                    </div>
+                    <div class="vital-trend">
+                        <span class="trend-text">Current status</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alerts Section -->
+            <div class="alerts-section">
+                <h2 class="section-subtitle">Recent Alerts</h2>
+                <div class="alerts-container" id="alertsContainer">
+                    <div class="alert-empty">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                        </svg>
+                        <p>All vitals are within normal range</p>
+                        <span>Keep up the healthy habits! 🎉</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANALYTICS PAGE -->
+    <section id="analytics" class="section">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Health Analytics</h1>
+                <p class="page-subtitle">7-day insights and trends</p>
+            </div>
+
+            <div class="analytics-layout">
+                <!-- Trends Card -->
+                <div class="analytics-card">
+                    <div class="card-header">
+                        <h3 class="card-title">Weekly Trends</h3>
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="trends-list">
+                        <div class="trend-row">
+                            <span class="trend-label">Avg Heart Rate</span>
+                            <div class="trend-stats">
+                                <span class="trend-value">74 bpm</span>
+                                <span class="trend-change trend-up">+2.3%</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-label">Avg Blood Oxygen</span>
+                            <div class="trend-stats">
+                                <span class="trend-value">97%</span>
+                                <span class="trend-change trend-down">+0.8%</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-label">Sleep Quality</span>
+                            <div class="trend-stats">
+                                <span class="trend-value">7.8 hrs</span>
+                                <span class="trend-change trend-down">+0.5 hrs</span>
+                            </div>
+                        </div>
+                        <div class="trend-row">
+                            <span class="trend-label">Activity Score</span>
+                            <div class="trend-stats">
+                                <span class="trend-value">85/100</span>
+                                <span class="trend-change trend-down">+5 pts</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Insights Card -->
+                <div class="analytics-card">
+                    <div class="card-header">
+                        <h3 class="card-title">AI-Powered Insights</h3>
+                        <svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2z" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                    </div>
+                    <div class="insights-list">
+                        <div class="insight-item insight-success">
+                            <div class="insight-icon">✓</div>
+                            <div class="insight-content">
+                                <h4>Sleep Improvement Detected</h4>
+                                <p>Your sleep duration increased by 12% this week. Excellent progress!</p>
+                            </div>
+                        </div>
+                        <div class="insight-item insight-info">
+                            <div class="insight-icon">★</div>
+                            <div class="insight-content">
+                                <h4>Consistency Achievement</h4>
+                                <p>You maintained regular activity levels for 7 consecutive days.</p>
+                            </div>
+                        </div>
+                        <div class="insight-item insight-warning">
+                            <div class="insight-icon">!</div>
+                            <div class="insight-content">
+                                <h4>Heart Rate Variability</h4>
+                                <p>Slightly elevated resting heart rate. Consider stress management techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOMMENDATIONS PAGE -->
+    <section id="recommendations" class="section">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Health Recommendations</h1>
+                <p class="page-subtitle">Personalized guidance based on your health data</p>
+            </div>
+
+            <div class="recommendations-grid">
+                <div class="recommendation-card rec-exercise">
+                    <div class="rec-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </div>
+                    <h3 class="rec-title">Exercise & Activity</h3>
+                    <ul class="rec-list">
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>30 minutes of moderate cardio daily</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Strength training 2-3 times per week</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Include flexibility exercises like yoga</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Take 10,000 steps daily</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card rec-sleep">
+                    <div class="rec-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </div>
+                    <h3 class="rec-title">Sleep & Recovery</h3>
+                    <ul class="rec-list">
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Maintain consistent sleep schedule</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Aim for 7-9 hours of quality sleep</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Avoid screens 1 hour before bed</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Keep bedroom cool and dark</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card rec-nutrition">
+                    <div class="rec-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="rec-title">Nutrition & Hydration</h3>
+                    <ul class="rec-list">
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Drink 8 glasses of water daily</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Include omega-3 rich foods</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Reduce processed sugar intake</span>
+                        </li>
+                        <li>
+                            <span class="rec-check">✓</span>
+                            <span>Eat more fruits and vegetables</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="page-header">
+                    <h1 class="page-title">About HealthAI</h1>
+                    <p class="page-subtitle">Advanced AI technology for smarter health monitoring</p>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-subtitle">Our Mission</h3>
+                    <p class="about-text">
+                        HealthAI leverages cutting-edge artificial intelligence and machine learning to revolutionize
+                        personal health monitoring. Our platform provides real-time insights into your vital signs,
+                        detects potential health anomalies, and offers personalized recommendations to help you
+                        maintain optimal wellness.
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-subtitle">Technology Stack</h3>
+                    <div class="tech-stack">
+                        <div class="tech-badge">
+                            <span class="tech-icon">🤖</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-icon">🐍</span>
+                            <span>Python & Flask</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-icon">📊</span>
+                            <span>Isolation Forest</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-icon">⚡</span>
+                            <span>Real-time Processing</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-icon">🎨</span>
+                            <span>Modern Web UI</span>
+                        </div>
+                        <div class="tech-badge">
+                            <span class="tech-icon">☁️</span>
+                            <span>Cloud Ready</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-subtitle">Key Features</h3>
+                    <ul class="features-list">
+                        <li>Real-time vital signs monitoring with 5-second updates</li>
+                        <li>AI-powered anomaly detection using Isolation Forest algorithm</li>
+                        <li>Personalized health insights and recommendations</li>
+                        <li>Historical data analysis and trend visualization</li>
+                        <li>Responsive design for all devices</li>
+                        <li>RESTful API for seamless integration</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3 class="about-subtitle">Open Source Project</h3>
+                    <p class="about-text">
+                        HealthAI is an open-source project built for educational purposes and to demonstrate
+                        the power of AI in healthcare. The complete source code is available on GitHub.
+                    </p>
+                    <a href="https://github.com/B-Lynx-del/HEALTH_AI.git" target="_blank" class="btn btn-github">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 HealthAI. Built with ❤️ for better health monitoring.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
