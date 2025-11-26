@@ -1,5 +1,7 @@
 📖 README Structure for HealthAI Monitor
+
 📌 Project Overview
+
 HealthAI Monitor is a full‑stack health monitoring application with a modern frontend and a Python backend. It provides real‑time health metrics, anomaly detection, and recommendations using simulated or device‑integrated data.
 
 🌐 Frontend: HTML, CSS, JavaScript (5 pages, responsive design)
