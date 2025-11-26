@@ -4,7 +4,7 @@ HealthAI Monitor is a full‑stack health monitoring application that blends a s
 
 ✨ Frontend: HTML, CSS, JavaScript (5 pages, fully responsive) 🐍 Backend: Flask REST API + ML anomaly detection (Isolation Forest) 🎯 Modes: Works offline with simulated data OR online with real device integration
 
-👤 Created by: Praise Becklyn 📑 Pitch Deck: View Here (replace # with your pitch deck link)
+👤 Created by: Praise Becklyn 📑 Pitch Deck: View Here (https://gamma.app/docs/HealthAI-Monitor-y860pmqvqer41rw?mode=doc)
 
 📂 File Structure
 Code
