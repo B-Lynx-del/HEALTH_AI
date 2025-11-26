@@ -45,7 +45,7 @@ Code
 ⚡ Setup Instructions
 🔧 1. Clone the Repository
 bash
-git clone https://github.com/your-username/healthai-monitor.git
+git clone https://https://github.com/B-Lynx-del/healthai-monitor.git
 cd healthai-monitor
 📦 2. Install Python Dependencies
 bash
